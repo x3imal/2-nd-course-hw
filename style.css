@@ -1,5 +1,4 @@
-@use 'vars' as *;
-
+@charset "UTF-8";
 /* Общие стили */
 * {
   padding: 0;
@@ -8,7 +7,7 @@
 }
 
 body {
-  font-family: $font-family;
+  font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -19,8 +18,8 @@ input, button, textarea, select, optgroup {
 
 .center {
   margin: 0 auto;
-  max-width: $max-width;
-  padding: 0 $spacing-small;
+  max-width: 1222px;
+  padding: 0 8px;
 }
 
-@import 'index';
+/*# sourceMappingURL=style.css.map */
