@@ -1,15 +1,16 @@
+@use 'vars' as *;
+
 header {
-  background-color: #E1FF8F;
+  background-color: $light-lime;
   height: 800px;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
 
-.header__content {
-  margin-left: 120px;
+.header__inner {
+  padding-left: clamp(16px, 8vw, 120px);
 }
-
 
 .header__title {
   display: inline-flex;
@@ -19,7 +20,7 @@ header {
   margin-top: 196px;
 }
 
-.title {
+.header__title-text {
   width: 769px;
   color: #202027;
   font-size: 64px;
@@ -28,7 +29,7 @@ header {
   line-height: normal;
 }
 
-.description {
+.header__description {
   width: 769px;
   color: #202027;
   font-size: 24px;
@@ -37,20 +38,17 @@ header {
   line-height: 32px;
 }
 
-.header__button {
 
-}
-
-.button {
+.header__start-button {
   display: flex;
   width: 247px;
   padding: 16px 28px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 60px;
-  border: 1px solid #202027;
-  background: #202027;
+  border-radius: $radius-full;
+  border: 1px solid $black;
+  background: $black;
   margin-top: 48px;
   color: #FFF;
   text-align: center;
@@ -58,4 +56,35 @@ header {
   font-style: normal;
   font-weight: 600;
   line-height: 141.688%;
+}
+
+
+.header__strip-content {
+  width: 100%;
+  background-color: #BCEC30;
+  padding: 27px 49px;
+  overflow: hidden;
+  margin-top: 156px;
+}
+
+.header__strip-content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 51px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.header__strip-content li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.header__strip-content li:not(:last-child)::after {
+  content: " ✦ ";
+  margin-left: 51px;
+  color: #000;
 }
