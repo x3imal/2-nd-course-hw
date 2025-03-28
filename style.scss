@@ -23,4 +23,8 @@ input, button, textarea, select, optgroup {
   padding: 0 8px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @import 'index';
