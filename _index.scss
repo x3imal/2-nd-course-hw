@@ -10,6 +10,7 @@ header {
 
 .header__inner {
   padding-left: clamp(16px, 8vw, 120px);
+  padding-right: clamp(16px, 8vw, 120px);
 }
 
 .header__title {
@@ -95,34 +96,90 @@ header {
 
   &__content {
     padding-left: clamp(16px, 8vw, 120px);
+    padding-right: clamp(16px, 8vw, 120px);
+
+    &-item {
+      border-radius: 30px;
+      background: #FFF;
+      box-shadow: 0 12.612px 42.251px -7.567px rgba(0, 0, 0, 0.13);
+      width: 100%;
+      height: 473px;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px;
+      }
+
+    }
+
+    &-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      margin-top: 72px;
+    }
   }
 }
 
-.content-title {
-  color: #FFF;
-  font-size: 64px;
+.main__content-item-img img {
+  width: 100%;
+  height: 314px;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+
+.content {
+
+  &-title {
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &-title {
+    padding-top: 94px;
+  }
+
+  &-description {
+    max-width: 788px;
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    margin-top: 24px;
+  }
+}
+
+.game-number {
+  width: 111px;
+  height: 36px;
+  display: flex;
+  padding: 8px 16px 10px 16px;
+  align-items: center;
+  border-radius: 52px;
+  background: #F7F7F7;
+  color: black;
+  font-size: 16px;
+
+
+}
+
+.game-name {
+  color: #202027;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  align-self: stretch;
 }
 
-.content-title {
-  padding-top: 94px;
-}
 
-.content-description {
-  max-width: 788px;
-  color: #FFF;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px; /* 133.333% */
-  margin-top: 24px;
-}
 
-.main__content-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-  margin-top: 72px;
-}
+
