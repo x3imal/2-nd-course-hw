@@ -31,8 +31,8 @@ header {
 }
 
 .header__inner {
-  padding-left: clamp(16px, 8vw, 120px);
-  padding-right: clamp(16px, 8vw, 120px);
+  padding-left: clamp(16px, 8vw, 80px);
+  padding-right: clamp(16px, 8vw, 80px);
 }
 
 .header__title {
@@ -112,18 +112,25 @@ header {
 
 .main {
   background-color: black;
-  height: 1470px;
 }
 .main__content {
-  padding-left: clamp(16px, 8vw, 120px);
-  padding-right: clamp(16px, 8vw, 120px);
+  padding-left: clamp(16px, 8vw, 80px);
+  padding-right: clamp(16px, 8vw, 80px);
+}
+.main__content-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 378px;
+  flex-grow: 1;
 }
 .main__content-item {
   border-radius: 30px;
   background: #FFF;
   box-shadow: 0 12.612px 42.251px -7.567px rgba(0, 0, 0, 0.13);
-  width: 100%;
-  height: 473px;
+  display: block;
+  width: 378px;
 }
 .main__content-item-text {
   display: flex;
@@ -132,8 +139,8 @@ header {
   padding: 32px;
 }
 .main__content-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   margin-top: 72px;
 }
@@ -168,6 +175,7 @@ header {
 
 .game-number {
   width: 111px;
+  text-wrap: nowrap;
   height: 36px;
   display: flex;
   padding: 8px 16px 10px 16px;
@@ -176,6 +184,10 @@ header {
   background: #F7F7F7;
   color: black;
   font-size: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .game-name {
