@@ -13,21 +13,21 @@
     <title>Мини-Игры</title>
 </head>
 <body>
-<header class="header">
-    <div class="header__inner">
-        <div class="header__content center">
-            <div class="header__title">
-                <h1 class="header__title-text">Добро пожаловать <br>на мой сайт мини-игр</h1>
-                <p class="header__description">Тебе предстоит пройти несколько увлекательных игр. <br>Если готов, нажимай
+<div class="hero">
+    <div class="hero__inner">
+        <div class="hero__content center">
+            <div class="hero__title">
+                <h1 class="hero__title-text">Добро пожаловать <br>на мой сайт мини-игр</h1>
+                <p class="hero__description">Тебе предстоит пройти несколько увлекательных игр. <br>Если готов, нажимай
                     <strong>«Поехали!»</strong> и
                     <strong>приступай</strong>.</p>
             </div>
-            <div class="header__start">
-                <button class="header__start-button">Поехали!</button>
+            <div class="hero__start">
+                <a href="#" class="hero__start-button">Поехали!</a>
             </div>
         </div>
     </div>
-    <nav class="header__strip-content">
+    <nav class="hero__strip-content">
         <ul>
             <li>ВИКТОРИНА</li>
             <li>УГАДАЙ ЧИСЛО</li>
@@ -37,19 +37,23 @@
             <li>ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</li>
         </ul>
     </nav>
-</header>
+</div>
 
 <main class="main">
-    <div class="main__content">
-        <div class="main__content-title center">
-            <h2 class="content-title">Об играх</h2>
-            <p class="content-description">В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные — в них
-                может поиграть каждый. Все игры доступны для пользования.</p>
-        </div>
-        <div class="main__content-container center">
 
-            <div class="main__content-column">
-                <a class="main__content-item" href="#">
+    <section class="games">
+        <div class="main__content">
+
+            <div class="main__content-title">
+                <h2 class="content-title">Об играх</h2>
+                <p class="content-description">В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные —
+                    в них
+                    может поиграть каждый. Все игры доступны для пользования.</p>
+            </div>
+
+            <div class="main__content-container">
+                <div class="main__content-column">
+                    <a class="main__content-item" href="#">
                         <div class="main__content-item-img">
                             <img src="./img/game1.svg" alt="Game 1">
                         </div>
@@ -57,9 +61,8 @@
                             <div class="game-number">Игра № 1</div>
                             <h3 class="game-name">Угадай число</h3>
                         </div>
-                </a>
-
-                <a class="main__content-item" href="#">
+                    </a>
+                    <a class="main__content-item" href="#">
                         <div class="main__content-item-img">
                             <img src="./img/game4.svg" alt="Game 4">
                         </div>
@@ -67,11 +70,11 @@
                             <div class="game-number">Игра № 4</div>
                             <h3 class="game-name">Камень, ножницы, <br> бумага</h3>
                         </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <div class="main__content-column">
-                <a class="main__content-item" href="#">
+                <div class="main__content-column">
+                    <a class="main__content-item" href="#">
                         <div class="main__content-item-img">
                             <img src="./img/game2.svg" alt="Game 2">
                         </div>
@@ -79,9 +82,8 @@
                             <div class="game-number">Игра № 2</div>
                             <h3 class="game-name">Простая арифметика</h3>
                         </div>
-                </a>
-
-                <a class="main__content-item" href="#">
+                    </a>
+                    <a class="main__content-item" href="#">
                         <div class="main__content-item-img">
                             <img src="./img/game5.svg" alt="Game 5">
                         </div>
@@ -89,11 +91,11 @@
                             <div class="game-number">Игра № 5</div>
                             <h3 class="game-name">Простая викторина</h3>
                         </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <div class="main__content-column">
-                <a class="main__content-item" href="#">
+                <div class="main__content-column">
+                    <a class="main__content-item" href="#">
                         <div class="main__content-item-img">
                             <img src="./img/game3.svg" alt="Game 3">
                         </div>
@@ -101,9 +103,8 @@
                             <div class="game-number">Игра № 3</div>
                             <h3 class="game-name">Переверни текст</h3>
                         </div>
-                </a>
-
-                <a class="main__content-item" href="#">
+                    </a>
+                    <a class="main__content-item" href="#">
                         <div class="main__content-item-img">
                             <img src="./img/game6.svg" alt="Game 6">
                         </div>
@@ -111,10 +112,12 @@
                             <div class="game-number">Игра № 6</div>
                             <h3 class="game-name">Генератор случайных цветов</h3>
                         </div>
-                </a>
+                    </a>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
 </main>
 </body>
 </html>

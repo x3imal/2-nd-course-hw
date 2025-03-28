@@ -1,6 +1,6 @@
 @use 'vars' as *;
 
-header {
+.hero {
   background-color: $light-lime;
   height: 800px;
   width: 100%;
@@ -8,12 +8,12 @@ header {
   background-position: center;
 }
 
-.header__inner {
-  padding-left: clamp(16px, 8vw, 80px);
-  padding-right: clamp(16px, 8vw, 80px);
+.hero__inner {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
 }
 
-.header__title {
+.hero__title {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -21,8 +21,8 @@ header {
   margin-top: 196px;
 }
 
-.header__title-text {
-  width: 769px;
+.hero__title-text {
+  max-width: 769px;
   color: #202027;
   font-size: 64px;
   font-style: normal;
@@ -30,8 +30,8 @@ header {
   line-height: normal;
 }
 
-.header__description {
-  width: 769px;
+.hero__description {
+  max-width: 769px;
   color: #202027;
   font-size: 24px;
   font-style: normal;
@@ -40,7 +40,7 @@ header {
 }
 
 
-.header__start-button {
+.hero__start-button {
   display: flex;
   width: 247px;
   padding: 16px 28px;
@@ -60,7 +60,7 @@ header {
 }
 
 
-.header__strip-content {
+.hero__strip-content {
   width: 100%;
   background-color: #BCEC30;
   padding: 27px 49px;
@@ -68,7 +68,7 @@ header {
   margin-top: 156px;
 }
 
-.header__strip-content ul {
+.hero__strip-content ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,12 +79,12 @@ header {
   font-size: 30px;
 }
 
-.header__strip-content li {
+.hero__strip-content li {
   position: relative;
   white-space: nowrap;
 }
 
-.header__strip-content li:not(:last-child)::after {
+.hero__strip-content li:not(:last-child)::after {
   content: " ✦ ";
   margin-left: 51px;
   color: #000;
@@ -97,8 +97,8 @@ header {
   //height: 1470px;
 
   &__content {
-    padding-left: clamp(16px, 8vw, 80px);
-    padding-right: clamp(16px, 8vw, 80px);
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
 
 
     &-column {
