@@ -28,15 +28,47 @@
         </div>
     </div>
     <nav class="hero__strip-content">
-        <ul>
-            <li>ВИКТОРИНА</li>
-            <li>УГАДАЙ ЧИСЛО</li>
-            <li>ПЕРЕВЕРНИ ТЕКСТ</li>
-            <li>ПРОСТАЯ АРИФМЕТИКА</li>
-            <li>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</li>
-            <li>ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</li>
-        </ul>
+        <div class="marquee">
+            <div class="strip__item"><a class="name" href="#">ВИКТОРИНА</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">УГАДАЙ ЧИСЛО</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">ПЕРЕВЕРНИН ТЕКСТ</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">ПРОСТАЯ АРИФМЕТИКА</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+
+            <div class="strip__item"><a class="name" href="#">ВИКТОРИНА</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">УГАДАЙ ЧИСЛО</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">ПЕРЕВЕРНИН ТЕКСТ</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">ПРОСТАЯ АРИФМЕТИКА</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+
+            <div class="strip__item"><a class="name" href="#">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</a></div>
+            <div class="star"><img src="./img/Star36.svg" alt="star" /></div>
+        </div>
     </nav>
+
+
 </div>
 
 <main class="main">
@@ -217,11 +249,16 @@
 
     </section>
 </main>
-
 <footer class="footer">
     <div class="footer__content">
         <h3 class="footer__title">Все права защищены.</h3>
     </div>
 </footer>
+<script>
+    const marquee = document.querySelector('.hero__strip-content .marquee');
+    const originalList = marquee.querySelector('ul');
+    const clone = originalList.cloneNode(true);
+    marquee.appendChild(clone);
+</script>
 </body>
 </html>
