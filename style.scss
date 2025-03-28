@@ -1,6 +1,5 @@
 @use 'vars' as *;
 
-/* Общие стили */
 * {
   padding: 0;
   margin: 0;
@@ -17,10 +16,10 @@ input, button, textarea, select, optgroup {
   font-family: inherit;
 }
 
-.center {
-  max-width: 1440px;
+.container {
+  max-width: $max-width;
   margin: 0 auto;
-  padding: 0 8px;
+  padding: 0 $spacing-small;
 }
 
 html {
