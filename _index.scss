@@ -8,6 +8,22 @@
   background-position: center;
 }
 
+//.big-star {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center; /* добавлено для вертикального выравнивания */
+//  position: absolute;
+//  width: 1000px;
+//  right: 50px;
+//  height: auto;
+//  top: 0;
+//}
+//
+//.big-star__img {
+//  width: 30%; /* уменьшает изображение до 50% от ширины контейнера */
+//  height: auto;
+//}
+
 .inner {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
