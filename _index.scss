@@ -8,21 +8,101 @@
   background-position: center;
 }
 
-//.big-star {
-//  display: flex;
-//  justify-content: center;
-//  align-items: center; /* добавлено для вертикального выравнивания */
-//  position: absolute;
-//  width: 1000px;
-//  right: 50px;
-//  height: auto;
-//  top: 0;
-//}
-//
-//.big-star__img {
-//  width: 30%; /* уменьшает изображение до 50% от ширины контейнера */
-//  height: auto;
-//}
+.big-star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+
+}
+
+.big-star-two {
+  position: absolute;
+  top: 100px;
+  right: -130px;
+  width: 585px;
+  height: auto;
+}
+
+.mini-star--flooded {
+  position: absolute;
+  left: 0;
+  margin-left: 63px;
+  margin-top: 94px;
+  width: 57px;
+  height: auto;
+
+}
+
+.mini-star--empty {
+  position: absolute;
+  left: 0;
+  margin-left: 156px;
+  margin-top: 70px;
+  width: 35px;
+  height: auto;
+
+}
+
+.mini-star--empty-big {
+  position: absolute;
+  left: 0;
+  margin-left: 1013px;
+  margin-top: 568px;
+  width: 83px;
+  height: auto;
+}
+
+.mini-star--empty-two {
+  position: absolute;
+  left: 0;
+  margin-left: 948px;
+  margin-top: 538px;
+  width: 37px;
+  height: auto;
+}
+
+.mini-star--empty-three {
+  position: absolute;
+  left: 0;
+  margin-left: 25px;
+  margin-top: 770px;
+  width: 31px;
+  height: auto;
+}
+
+.mini-star--empty-four {
+  position: absolute;
+  left: 0;
+  margin-left: 40px;
+  margin-top: 882px;
+  width: 54px;
+  height: auto;
+}
+
+.mini-star--empty-five {
+  position: absolute;
+  left: 0;
+  margin-left: 1158px;
+  margin-top: 47px;
+  width: 31px;
+  height: auto;
+}
+
+.mini-star--empty-six {
+  position: absolute;
+  left: 0;
+  margin-left: 1320px;
+  margin-top: 126px;
+  width: 54px;
+  height: auto;
+}
+
+.mini-star_img {
+  width: 100%;
+  height: auto;
+}
+
 
 .inner {
   padding-left: calc(50% - 600px);
@@ -141,6 +221,7 @@
 
 .main {
   background-color: black;
+  position: relative;
 
   &__content {
 
@@ -175,6 +256,7 @@
       flex-wrap: wrap;
       gap: 32px;
       margin-top: 72px;
+      position: relative;
     }
   }
 }
