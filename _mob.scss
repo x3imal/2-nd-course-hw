@@ -75,6 +75,7 @@
   }
 
   .mini-games {
+    padding-bottom: 49px;
 
     &__item {
       display: flex;
@@ -85,13 +86,14 @@
       border-radius: 45px;
     }
 
-&__content {
-  display: flex;
-  padding: 48px;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
+    &__content {
+      display: flex;
+      padding: 33px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
 
     &__container {
       display: flex;
@@ -115,6 +117,8 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      margin-top: 48px;
+      margin-bottom: 16px;
     }
 
     &__name {
@@ -131,6 +135,14 @@
       line-height: normal;
     }
 
+    &__start {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__text {
+      width: 100%;
+    }
   }
 }
 
