@@ -33,6 +33,11 @@
   }
 
   .hero__start {
+    display: none;
+  }
+
+  .hero__start-mob {
+    display: block;
     margin-top: 36px;
   }
 
@@ -211,5 +216,9 @@
   }
 
 
+  .hero__start-button:hover {
+    background-color: #000;
+    color: white;
+  }
 }
 

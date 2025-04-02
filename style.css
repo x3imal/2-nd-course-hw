@@ -146,6 +146,10 @@ html {
   margin-top: 48px;
 }
 
+.hero__start-mob {
+  display: none;
+}
+
 .hero__start-button:hover {
   background-color: white;
   color: black;
@@ -429,6 +433,10 @@ a {
   line-height: normal;
 }
 
+.big-star-mob {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .hero__content {
     display: flex;
@@ -457,6 +465,10 @@ a {
     line-height: normal;
   }
   .hero__start {
+    display: none;
+  }
+  .hero__start-mob {
+    display: block;
     margin-top: 36px;
   }
   .marquee {
@@ -597,6 +609,10 @@ a {
   .mini-star__img {
     width: 50%;
     height: auto;
+  }
+  .hero__start-button:hover {
+    background-color: #000;
+    color: white;
   }
 }
 

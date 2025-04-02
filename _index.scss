@@ -127,6 +127,10 @@
   margin-top: 48px;
 }
 
+.hero__start-mob {
+  display: none;
+}
+
 .hero__start-button:hover {
   background-color: white;
   color: black;
@@ -435,5 +439,9 @@ a {
     font-weight: 600;
     line-height: normal;
   }
+}
+
+.big-star-mob {
+  display: none;
 }
 
