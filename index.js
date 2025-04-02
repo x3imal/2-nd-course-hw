@@ -6,3 +6,5 @@ alert(a);
 
 
 //№2
+let iphoneData = 2007;
+alert(`Дата выхода перового iPhon ${iphoneData}`);
