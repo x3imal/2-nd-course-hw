@@ -1,0 +1,128 @@
+@media (max-width: 767px) {
+
+
+  // блок "Добро пожаловать"
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__title {
+    align-items: center;
+  }
+
+  .hero__title-text {
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .hero__description {
+    max-width: 296px;
+    width: 100%;
+    color: #202027;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .hero__start {
+    margin-top: 36px;
+  }
+
+  .marquee {
+    width: 100%;
+    background-color: #BCEC30;
+    overflow: hidden;
+    padding: 16px 0;
+    margin-top: 131px;
+    position: relative;
+
+    &__name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.64px;
+      text-transform: uppercase;
+    }
+
+    &__list {
+      gap: 27px;
+    }
+
+    &__item a {
+      font-size: 16px;
+    }
+
+    &__star {
+      display: block;
+      width: 20px;
+    }
+  }
+
+  .hero__start-button {
+    font-size: 16px;
+  }
+
+
+  //блок "Мини-Игры"
+  .games {
+    display: none;
+  }
+
+  .mini-games {
+
+    &__item {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      background: #FFF;
+      box-shadow: 0 20px 67px -12px rgba(0, 0, 0, 0.13);
+      border-radius: 45px;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &--right {
+      flex-direction: column;
+    }
+
+    &__img {
+      display: flex;
+      width: 385px;
+      height: 285px;
+      border-radius: 30px;
+    }
+
+    &__title {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &__name {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &__description {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+  }
+}
+

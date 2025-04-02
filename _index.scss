@@ -13,7 +13,6 @@
   top: 0;
   right: 0;
   height: auto;
-
 }
 
 .big-star-two {
@@ -115,12 +114,13 @@
 }
 
 .hero__description {
-  max-width: 769px;
+  max-width: 720px;
   color: #202027;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+  text-align: left;
 }
 
 .hero__start {
