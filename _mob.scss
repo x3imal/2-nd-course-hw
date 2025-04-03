@@ -10,6 +10,7 @@
 
   .hero__title {
     align-items: center;
+    margin-top: 147px;
   }
 
   .hero__title-text {
@@ -32,6 +33,11 @@
   }
 
   .hero__start {
+    display: none;
+  }
+
+  .hero__start-mob {
+    display: block;
     margin-top: 36px;
   }
 
@@ -66,6 +72,7 @@
 
   .hero__start-button {
     font-size: 16px;
+    width: 285px;
   }
 
 
@@ -75,6 +82,7 @@
   }
 
   .mini-games {
+    padding-bottom: 49px;
 
     &__item {
       display: flex;
@@ -83,6 +91,15 @@
       background: #FFF;
       box-shadow: 0 20px 67px -12px rgba(0, 0, 0, 0.13);
       border-radius: 45px;
+    }
+
+    &__content {
+      display: flex;
+      padding: 33px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
     }
 
     &__container {
@@ -107,6 +124,8 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      margin-top: 48px;
+      margin-bottom: 16px;
     }
 
     &__name {
@@ -123,6 +142,83 @@
       line-height: normal;
     }
 
+    &__start {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+
+
+  //звезды (будь они неладны)
+
+  .big-star {
+    display: none;
+  }
+
+  .big-star-two {
+    display: none;
+  }
+
+  .big-star-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    position: absolute;
+    height: auto;
+    right: 0;
+  }
+
+  .mini-star--empty-five {
+    display: none;
+  }
+
+  .mini-star--empty-six {
+    display: none;
+  }
+
+  .mini-star--flooded {
+    position: absolute;
+    left: 40px;
+    top: 95px;
+    height: auto;
+
+  }
+
+  .mini-star--empty {
+    position: absolute;
+    left: 110px;
+    top: 69px;
+    height: auto;
+
+  }
+
+  .mini-star--empty-big {
+    position: absolute;
+    right: 0;
+    top: 580px;
+    height: auto;
+  }
+
+  .mini-star--empty-two {
+    position: absolute;
+    right: 60px;
+    top: 550px;
+    height: auto;
+  }
+
+  .mini-star__img {
+    width: 50%;
+    height: auto;
+  }
+
+
+  .hero__start-button:hover {
+    background-color: #000;
+    color: white;
   }
 }
 
