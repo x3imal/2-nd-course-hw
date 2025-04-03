@@ -1,55 +1,103 @@
 //1
-let number = 10;
-alert(number)
-number = 20;
-alert(number);
+let password = 'пароль';
+let passwordUser = prompt('Введите пароль').toLowerCase();
+let result = (password === passwordUser)
+    ? alert('Пароль введен верно')
+    : alert('Пароль введен неправильно');
 
 
 //2
-let iphoneData = 2007;
-alert(`Дата выхода перового iPhon ${iphoneData}`);
+let c = 9;
+if (c > 0 && c < 10) {
+    console.log('Верно')
+} else {
+    console.log('Неверно')
+}
+
 
 //3
-let name = 'Brendan Eich';
-alert(`Создатель JS: ${name}`);
+let d = 101;
+let e = 33;
+if (d > 100 || e > 100) {
+    console.log('Верно')
+} else {
+    console.log('Неверно')
+}
+
 
 //4
-let d = 10;
-let b = 2;
-alert(`Сумма = ${d + b}, разность = ${d - b}, произведение = ${d * b}, частное = ${d / b}`);
+let a = '2';
+let b = '3';
+let result2 = Number(a) + Number(b);
+alert(result2);
+
 
 //5
-let x = 2;
-let result = x ** 5;
-alert(`${x} в 5 степени: ${result}`);
-
-//6
-let a = 9;
-let c = 2;
-alert(`Остаток от деления: ${a % c}`);
-
-//7
-let num = 1;
-num +=5;
-num -=3;
-num *=7;
-num /=3;
-num +=1;
-num -=1;
-alert(num);
-
-//8
-let age = Number(prompt('Сколько Вам лет?'));
-alert(`Вам: ${age} лет`);
-
-//9
-const user = {
-    name: "Brendan Eich",
-    age: 32,
-    isAdmin: false,
+let monthNumber = Number(prompt('Введите номер месяца'));
+if (monthNumber < 1 || monthNumber > 12) {
+    console.log('Неверный номер месяца');
+} else {
+    switch (monthNumber) {
+        case 12:
+        case 1:
+        case 2:
+            console.log('Зима');
+            break;
+        case 3:
+        case 4:
+        case 5:
+            console.log('Весна');
+            break;
+        case 6:
+        case 7:
+        case 8:
+            console.log('Лето');
+            break;
+        case 9:
+        case 10:
+        case 11:
+            console.log('Осень');
+            break;
+        default:
+            console.log('Такого месяца не существует');
+    }
 }
-alert(`Имя: ${user.name}\nВозраст: ${user.age}\nАдмин: ${user.isAdmin ? 'Да' : 'Нет'}`);
 
-//10
-let nameUser = String(prompt('Ваше имя?'))
-alert(`Привет: ${nameUser}`);
+
+// Дополнительное задание 1
+let num2 = Number(prompt('Пожалуйста, введите любое число '))
+
+if (num2 % 2 === 0) {
+    alert('Число четное')
+} else {
+    alert('Число нечетное')
+}
+
+// Дополнительное задание 2
+let clientOS = 0;
+
+if (clientOS === 0) {
+    console.log('Установите версию приложения для iOS по ссылке')
+} else if (clientOS === 1) {
+    console.log('Установите версию приложения для Android по ссылке')
+} else {
+    console.log('Ошибка')
+}
+
+// Дополнительное задание 3
+let clientOs2 = 1
+let clientDeviceYear = 2015
+
+if (clientDeviceYear < 2015) {
+    if (clientOs2 === 0) {
+        console.log('Установите облегченную версию приложения для iOS по ссылке');
+    } else if (clientOs2 === 1) {
+        console.log('Установите облегченную версию приложения для Android по ссылке');
+    } else {
+        console.log('Ошибка');
+    }
+} else {
+    console.log('Установите приложение по ссылке');
+}
+
+
