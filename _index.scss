@@ -47,10 +47,6 @@
   &__start {
     margin-top: 48px;
 
-    &--mob {
-      display: none;
-    }
-
     &-button {
       display: flex;
       width: 247px;
@@ -76,6 +72,10 @@
   }
 }
 
+.hero__start--mob {
+  display: none;
+}
+
 .big-star {
   position: absolute;
   top: 0;
@@ -86,9 +86,7 @@
     display: none;
   }
 
-  &--two {
-    top: 100px;
-    right: -130px;
+  &--des {
     width: 585px;
   }
 

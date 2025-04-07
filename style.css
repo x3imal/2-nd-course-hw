@@ -64,9 +64,6 @@ html {
 .hero__start {
   margin-top: 48px;
 }
-.hero__start--mob {
-  display: none;
-}
 .hero__start-button {
   display: flex;
   width: 247px;
@@ -89,6 +86,10 @@ html {
   color: black;
 }
 
+.hero__start--mob {
+  display: none;
+}
+
 .big-star {
   position: absolute;
   top: 0;
@@ -98,9 +99,7 @@ html {
 .big-star--mob {
   display: none;
 }
-.big-star--two {
-  top: 100px;
-  right: -130px;
+.big-star--des {
   width: 585px;
 }
 .big-star__img {
@@ -441,12 +440,11 @@ a {
     font-weight: 400;
     line-height: normal;
   }
-  .hero__start {
-    display: none;
-  }
-  .hero__start--mob {
+  .big-star--mob {
     display: block;
-    margin-top: 36px;
+  }
+  .big-star--two {
+    display: none;
   }
   .marquee {
     width: 100%;
@@ -475,6 +473,12 @@ a {
   .hero__start-button {
     font-size: 16px;
     width: 285px;
+  }
+  .hero__start--dis {
+    display: none;
+  }
+  .hero__start--mob {
+    display: block;
   }
   .games {
     display: none;
@@ -539,10 +543,7 @@ a {
   .mini-games__text {
     width: 100%;
   }
-  .big-star {
-    display: none;
-  }
-  .big-star-two {
+  .big-star--des {
     display: none;
   }
   .big-star-mob {
@@ -590,6 +591,10 @@ a {
   .hero__start-button:hover {
     background-color: #000;
     color: white;
+  }
+  .mini-games__start-button {
+    font-size: 16px;
+    width: 285px;
   }
 }
 

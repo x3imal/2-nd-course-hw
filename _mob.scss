@@ -32,13 +32,13 @@
     line-height: normal;
   }
 
-  .hero__start {
-    display: none;
+
+  .big-star--mob {
+    display: block;
   }
 
-  .hero__start--mob {
-    display: block;
-    margin-top: 36px;
+  .big-star--two {
+    display: none;
   }
 
   .marquee {
@@ -73,6 +73,15 @@
   .hero__start-button {
     font-size: 16px;
     width: 285px;
+  }
+
+  .hero__start--dis{
+    display: none;
+  }
+
+
+  .hero__start--mob {
+    display: block;
   }
 
 
@@ -155,11 +164,7 @@
 
   //звезды (будь они неладны)
 
-  .big-star {
-    display: none;
-  }
-
-  .big-star-two {
+  .big-star--des {
     display: none;
   }
 
@@ -219,6 +224,11 @@
   .hero__start-button:hover {
     background-color: #000;
     color: white;
+  }
+
+  .mini-games__start-button {
+    font-size: 16px;
+    width: 285px;
   }
 }
 
