@@ -10,6 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function randomNumberGame() {
+            const secretNumb = Math.floor(Math.random() * 100) + 1;
+            let userNum = 0;
+
+            while (userNum !== secretNumb) {
+                userNum = Number(prompt('Угадай число от 1 до 100'));
+
+                if (userNum < secretNumb) {
+                    alert('Загаданное число больше');
+                } else if (userNum > secretNumb) {
+                    alert('Загаданное число меньше');
+                } else {
+                    alert(`Угадал! Это было ${secretNumb}`);
+                }
+            }
+        }
+    </script>
     <title>Мини-Игры</title>
 </head>
 <body>
@@ -171,21 +189,21 @@
             </div>
             <div class="mini-games__container">
                 <h2 class="mini-games__title">Мини-игры</h2>
-                <div class="mini-games__item mini-games__item--left">
+                <article class="mini-games__item mini-games__item--left">
                     <div class="mini-games__content">
                         <div class="mini-games__text">
                             <h3 class="mini-games__name">Угадай число</h3>
                             <p class="mini-games__description">Попробуй угадать случайное <br> число от 1 до 100.</p>
                             <div class="mini-games__start">
-                                <a href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=randomNumberGame() href="#" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
                     <div class="mini-games__img">
                         <img id="game1" src="./img/game1.svg" alt="Game 1">
                     </div>
-                </div>
-                <div class="mini-games__item mini-games__item--right">
+                </article>
+                <article class="mini-games__item mini-games__item--right">
                     <div class="mini-games__content">
                         <div class="mini-games__text">
                             <h3 class="mini-games__name">Простая арифметика</h3>
@@ -198,8 +216,8 @@
                     <div class="mini-games__img">
                         <img id="game2" src="./img/game2.svg" alt="Game 2">
                     </div>
-                </div>
-                <div class="mini-games__item mini-games__item--left">
+                </article>
+                <article class="mini-games__item mini-games__item--left">
                     <div class="mini-games__content">
                         <div class="mini-games__text">
                             <h3 class="mini-games__name">Переверни текст</h3>
@@ -212,8 +230,8 @@
                     <div class="mini-games__img">
                         <img id="game3" src="./img/game3.svg" alt="Game 3">
                     </div>
-                </div>
-                <div class="mini-games__item mini-games__item--right">
+                </article>
+                <article class="mini-games__item mini-games__item--right">
                     <div class="mini-games__content">
                         <div class="mini-games__text">
                             <h3 class="mini-games__name">Викторина</h3>
@@ -227,8 +245,8 @@
                     <div class="mini-games__img">
                         <img id="game5" src="./img/game5.svg" alt="Game 5">
                     </div>
-                </div>
-                <div class="mini-games__item mini-games__item--left">
+                </article>
+                <article class="mini-games__item mini-games__item--left">
                     <div class="mini-games__content">
                         <div class="mini-games__text">
                             <h3 class="mini-games__name">Камень, <br> ножницы, <br> бумага</h3>
@@ -241,8 +259,8 @@
                     <div class="mini-games__img">
                         <img id="game4" src="./img/game4.jpg" alt="Game 4">
                     </div>
-                </div>
-                <div class="mini-games__item mini-games__item--right">
+                </article>
+                <article class="mini-games__item mini-games__item--right">
                     <div class="mini-games__content">
                         <div class="mini-games__text">
                             <h3 class="mini-games__name">Генератор случайных <br> цветов</h3>
@@ -256,7 +274,7 @@
                     <div class="mini-games__img">
                         <img id="game6" src="./img/game6.svg" alt="Game 6">
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>

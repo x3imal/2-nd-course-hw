@@ -1,103 +1,104 @@
-//1
-let password = 'пароль';
-let passwordUser = prompt('Введите пароль').toLowerCase();
-let result = (password === passwordUser)
-    ? alert('Пароль введен верно')
-    : alert('Пароль введен неправильно');
-
-
-//2
-let c = 9;
-if (c > 0 && c < 10) {
-    console.log('Верно')
-} else {
-    console.log('Неверно')
+//Задания 1
+function minimumReturn(a, b) {
+    return a < b ? a : b;
 }
+console.log(minimumReturn(8, 6));
 
 
-//3
-let d = 101;
-let e = 33;
-if (d > 100 || e > 100) {
-    console.log('Верно')
-} else {
-    console.log('Неверно')
-}
-
-
-//4
-let a = '2';
-let b = '3';
-let result2 = Number(a) + Number(b);
-alert(result2);
-
-
-//5
-let monthNumber = Number(prompt('Введите номер месяца'));
-if (monthNumber < 1 || monthNumber > 12) {
-    console.log('Неверный номер месяца');
-} else {
-    switch (monthNumber) {
-        case 12:
-        case 1:
-        case 2:
-            console.log('Зима');
-            break;
-        case 3:
-        case 4:
-        case 5:
-            console.log('Весна');
-            break;
-        case 6:
-        case 7:
-        case 8:
-            console.log('Лето');
-            break;
-        case 9:
-        case 10:
-        case 11:
-            console.log('Осень');
-            break;
-        default:
-            console.log('Такого месяца не существует');
-    }
-}
-
-
-// Дополнительное задание 1
-let num2 = Number(prompt('Пожалуйста, введите любое число '))
-
-if (num2 % 2 === 0) {
-    alert('Число четное')
-} else {
-    alert('Число нечетное')
-}
-
-// Дополнительное задание 2
-let clientOS = 0;
-
-if (clientOS === 0) {
-    console.log('Установите версию приложения для iOS по ссылке')
-} else if (clientOS === 1) {
-    console.log('Установите версию приложения для Android по ссылке')
-} else {
-    console.log('Ошибка')
-}
-
-// Дополнительное задание 3
-let clientOs2 = 1
-let clientDeviceYear = 2015
-
-if (clientDeviceYear < 2015) {
-    if (clientOs2 === 0) {
-        console.log('Установите облегченную версию приложения для iOS по ссылке');
-    } else if (clientOs2 === 1) {
-        console.log('Установите облегченную версию приложения для Android по ссылке');
+//Задание 2
+let userNum = Number(prompt("Enter a number"));
+function stringNumber(n) {
+    if (isNaN(n)) {
+        console.log("Это не число");
+    } else if (n % 2 === 0) {
+        console.log("Число четное");
     } else {
-        console.log('Ошибка');
+        console.log("Число нечетное");
     }
-} else {
-    console.log('Установите приложение по ссылке');
 }
+stringNumber(userNum);
+
+
+//Задание 3
+function square(a) {
+    console.log(a ** 2);
+}
+square(3);
+
+function square2(a) {
+    return a ** 2;
+}
+console.log(square2(3));
+
+
+//Задание 4
+let userAge = Number(prompt('What is your age?'));
+
+function howUserAge(a) {
+    if (a < 0) {
+        return alert('Вы ввели неправильное значение');
+    } else if (a === 0 || a <= 12) {
+        return alert("Привет, друг!")
+    } else {
+        return alert("Добро пожаловать!");
+    }
+}
+howUserAge(userAge);
+
+
+//Задание №5
+function howNumber(x, y) {
+    if (isNaN(x) || isNaN(y)) {
+        return alert("Одно или оба значения не являются числом");
+    } else {
+        return alert(x * y);
+    }
+}
+howNumber(5, "");
+
+
+
+//Задание №6
+function howNumberNew () {
+    let num = Number(prompt('Enter a number'));
+    if (isNaN(num)) {
+        return alert('Переданный параметр не является числом');
+    } else {
+        return alert(`${num} в кубе равняется ${num**3}`);
+    }
+}
+howNumberNew();
+
+
+//Задание №7
+function getArea() {
+    return Math.PI * this.radius ** 2;
+}
+
+function getPerimeter() {
+    return 2 * Math.PI * this.radius;
+}
+
+const circle1 = {
+    radius: 20,
+    getArea,
+    getPerimeter
+};
+
+const circle2 = {
+    radius: 100,
+    getArea,
+    getPerimeter
+};
+
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter());
+console.log(circle2.getArea());
+console.log(circle2.getPerimeter());
+
+
+
+
+
 
 
