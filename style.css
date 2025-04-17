@@ -440,6 +440,9 @@ a {
     font-weight: 400;
     line-height: normal;
   }
+  .hero__start {
+    margin-top: 36px;
+  }
   .big-star--mob {
     display: block;
   }
@@ -469,6 +472,10 @@ a {
   .marquee__star {
     display: block;
     width: 20px;
+  }
+  .marquee__star-img {
+    width: 19px;
+    height: 19px;
   }
   .hero__start-button {
     font-size: 16px;
@@ -595,6 +602,9 @@ a {
   .mini-games__start-button {
     font-size: 16px;
     width: 285px;
+  }
+  .mini-games__content {
+    padding: 29px 29px 32px 29px;
   }
 }
 
