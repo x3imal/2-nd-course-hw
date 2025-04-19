@@ -601,13 +601,17 @@ a {
   }
   .mini-games__start-button {
     font-size: 16px;
-    width: 285px;
+    width: 100%;
   }
   .mini-games__content {
     padding: 29px 29px 32px 29px;
+    border-radius: 27.222px;
   }
   .mini-games__container {
     gap: 24px;
+  }
+  .mini-games__inner {
+    padding: 0 16px;
   }
 }
 
