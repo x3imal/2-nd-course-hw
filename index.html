@@ -10,65 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-        function randomNumberGame() {
-            const secretNumb = Math.floor(Math.random() * 100) + 1;
-            let userNum = 0;
-
-            while (userNum !== secretNumb) {
-                userNum = Number(prompt('Угадай число от 1 до 100'));
-
-                if (userNum < secretNumb) {
-                    alert('Загаданное число больше');
-                } else if (userNum > secretNumb) {
-                    alert('Загаданное число меньше');
-                } else {
-                    alert(`Угадал! Это было ${secretNumb}`);
-                }
-            }
-        }
-
-        function simpleArithmeticGame() {
-            const mathExamples = [
-                ["5 + 3 = ?", "8"],
-                ["12 + 7 = ?", "19"],
-                ["25 + 14 = ?", "39"],
-                ["8 + 9 + 2 = ?", "19"],
-                ["17 + 6 = ?", "23"],
-
-                ["10 − 4 = ?", "6"],
-                ["15 − 8 = ?", "7"],
-                ["23 − 11 = ?", "12"],
-                ["30 − 14 = ?", "16"],
-                ["50 − 25 = ?", "25"],
-
-                ["3 × 4 = ?", "12"],
-                ["5 × 7 = ?", "35"],
-                ["6 × 9 = ?", "54"],
-                ["8 × 3 = ?", "24"],
-                ["10 × 5 = ?", "50"],
-
-                ["12 ÷ 3 = ?", "4"],
-                ["20 ÷ 5 = ?", "4"],
-                ["28 ÷ 7 = ?", "4"],
-                ["36 ÷ 6 = ?", "6"],
-                ["45 ÷ 9 = ?", "5"]
-            ];
-
-            let examples = mathExamples[Math.floor(Math.random() * mathExamples.length)];
-            let question = examples[0];
-            let answer = examples[1];
-
-            let answerUser = prompt(`ВВедите ответ на пример ${question}: `);
-
-            if (Number(answer) === Number(answerUser)) {
-                return alert("Поздравляю, правильно!");
-            } else {
-                return alert("Неправильно!");
-            }
-        }
-
-    </script>
+    <script src="game.js" defer></script>
     <title>Мини-Игры</title>
 </head>
 <body>
