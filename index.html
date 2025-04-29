@@ -10,24 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-        function randomNumberGame() {
-            const secretNumb = Math.floor(Math.random() * 100) + 1;
-            let userNum = 0;
-
-            while (userNum !== secretNumb) {
-                userNum = Number(prompt('Угадай число от 1 до 100'));
-
-                if (userNum < secretNumb) {
-                    alert('Загаданное число больше');
-                } else if (userNum > secretNumb) {
-                    alert('Загаданное число меньше');
-                } else {
-                    alert(`Угадал! Это было ${secretNumb}`);
-                }
-            }
-        }
-    </script>
+    <script src="game.js" defer></script>
     <title>Мини-Игры</title>
 </head>
 <body>
@@ -209,7 +192,7 @@
                             <h3 class="mini-games__name">Простая арифметика</h3>
                             <p class="mini-games__description">Попробуй решить простые арифметические задачи.</p>
                             <div class="mini-games__start">
-                                <a href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=simpleArithmeticGame() href="#" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
