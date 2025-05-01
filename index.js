@@ -1,133 +1,99 @@
-//задание 1
-const arr1 = [1, 5, 4, 10, 0, 3];
-for (let i = 0; i < arr1.length; i++) {
-    console.log(arr1[i]);
-    if (arr1[i] === 10) break;
+// Задание 1
+let js = "js";
+console.log(js.toUpperCase());
+
+//Задание 2
+function filterBySecondLine(array) {
+    if (array.length < 2) return [];
+    const prefix = array[1].toLowerCase();
+    return array.filter(str => str.toLowerCase().startsWith(prefix));
 }
 
-//задание 2
-const arr2 = [1, 5, 4, 10, 0, 3];
-for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i] === 4) {
-        console.log(i);
-        break;
+const array1 = [
+    "бабка ела кашу и всех ей кормила",
+    "петя гулял по саду и собаку свою он ждал",
+    "маша с друзьями на лето поехала в деревню",
+    "они вместе в поле работали и отдыхали",
+    "вечером у костра пели песни и смотрели на звезды"
+]
+const result1 = filterBySecondLine(array1);
+console.log(result1);
+
+//Задание 3
+let num1 = 32.58884;
+console.log(Math.floor(num1));
+console.log(Math.ceil(num1));
+console.log(Math.round(num1));
+
+//Задание 4
+const arrayMinMax = [52, 53, 49, 77, 21, 32];
+
+function returnMinMax(arr) {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    console.log("Минимум:", min);
+    console.log("Максимум:", max);
+}
+
+returnMinMax(arrayMinMax);
+
+//Задание 5
+function randomNum () {
+    console.log(Math.round(Math.random() * 10));
+}
+
+randomNum()
+
+//Задание 6
+function randomInt(num) {
+    const array = [];
+    const length = Math.floor(num / 2);
+    for (let i = 0; i < length; i++) {
+        array[i] = Math.floor(Math.random() * num);
     }
+    return array;
 }
 
-//задание 3
-const arr3 = [1, 3, 5, 10, 20];
-let arr3Copy = arr3.join(' ');
-console.log(arr3Copy);
-
-//задание 4
-function createMatrix() {
-    let rows = 3;
-    let cols = 3;
-    let emptyArr = [];
-
-    for (let i = 0; i < rows; i++) {
-        let row = [];
-        for (let j = 0; j < cols; j++) {
-            row.push(1);
-        }
-        emptyArr.push(row);
-    }
-
-    return emptyArr;
-}
-createMatrix()
-
-//задание 5
-const arr5 = [1, 1, 1];
-arr5.push(2, 2, 2);
-console.log(arr5);
-
-//задание 6
-const arr6 = [9, 8, 7, 'a', 6, 5];
-arr6.sort();
-arr6.pop();
-console.log(arr6);
+console.log(randomInt(10));
 
 //Задание 7
-const arr7 = [9, 8, 7, 6, 5];
-let answerUser1 = Number(prompt("Угадайте число"))
-
-if (arr7.includes(answerUser1)) {
-    alert("Угадал")
-} else {
-    alert("Не угадал")
+function randomInt(num1, num2) {
+    return Math.floor(Math.random() * (num1 - num2)) + num2;
 }
+
+console.log(randomInt(6, 10));
 
 //Задание 8
-let line = "abcdef";
-const arr8 = line.split("");
-console.log(arr8.reverse());
+let date = new Date();
+console.log(date);
 
 //Задание 9
-const arr9 = [[1, 2, 3],[4, 5, 6]];
-const arrNew9 = [];
-for (let i = 0; i < arr9.length; i++) {
-    for (let j = 0; j < arr9[i].length; j++) {
-        arrNew9.push(arr9[i][j]);
-    }
-}
-console.log(arrNew9);
+let currentDate = new Date();
+currentDate.setDate(currentDate.getDate() + 73);
+console.log(currentDate);
 
 //Задание 10
-const arr10 = [];
+function getDataRussian(date) {
+    const days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+    const months = [
+        "января", "февраля", "марта", "апреля", "мая", "июня",
+        "июля", "августа", "сентября", "октября", "ноября", "декабря"
+    ];
 
-for (let i = 1; i <= 10; i++) {
-    let randomNumber = Math.floor(Math.random() * 10) + 1;
-    arr10.push(randomNumber);
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    const weekDay = days[date.getDay()];
+
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+
+    console.log(`Дата: ${day} ${month} ${year} — это ${weekDay}.`);
+    console.log(`Время: ${hours}:${minutes}:${seconds}`);
 }
 
-for (let i = 0; i < arr10.length - 1; i++) {
-    let sum = arr10[i] + arr10[i + 1];
-    console.log(`Сумма элементов ${arr10[i]} и ${arr10[i + 1]}: ${sum}`);
-}
+getDataRussian(currentDate);
 
-console.log(arr10);
 
-//Задание 11
-function getSquares(arr) {
-    return arr.map(num => num * num);
-}
 
-const numbers = [1, 2, 3, 4, 5];
-const squares = getSquares(numbers);
-
-console.log(squares);
-
-//Задание 12
-function worlds(arr) {
-    return arr.map(word => word.length);
-}
-
-const words = ["apple", "banana", "kiwi", "orange"];
-const lengths = worlds(words);
-
-console.log(lengths);
-
-//Задание 13
-function getNegativeNumbers(arr) {
-    return arr.filter(num => num < 0);
-}
-
-const numbers2 = [1, -2, 3, -4, 5, -6];
-const negatives = getNegativeNumbers(numbers2);
-
-console.log(negatives);
-
-//Задание 14
-const randomArray = Array.from({ length: 10 }, () => Math.floor(Math.random() * 11));
-const evenNumbers = randomArray.filter(num => num % 2 === 0);
-
-console.log("Исходный массив:", randomArray);
-console.log("Массив с чётными числами:", evenNumbers);
-
-//Задание 15
-const randomNumbers = Array.from({ length: 6 }, () => Math.floor(Math.random() * 10) + 1);
-const average = randomNumbers.reduce((sum, num) => sum + num, 0) / randomNumbers.length;
-
-console.log("Массив:", randomNumbers);
-console.log("Среднее арифметическое:", average);
