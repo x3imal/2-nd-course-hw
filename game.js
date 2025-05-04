@@ -98,6 +98,26 @@ function runQuiz() {
     alert(`Вы правильно ответили на ${score} из ${quiz.length} вопросов!`);
 }
 
+//Игра 5
+function rockPaperScissors() {
+    let userAnswer = prompt("Камень, ножницы или бумага?");
+    const rules = {
+        камень: "ножницы",
+        бумага: "камень",
+        ножницы: "бумага"
+    };
+
+    let arrAnswer = Object.keys(rules);
+    let compAnswer = arrAnswer[Math.floor(Math.random() * arrAnswer.length)];
+
+    if (userAnswer.toLowerCase() === compAnswer) {
+        alert("Ничья!");
+    } else if (rules[userAnswer.toLowerCase()] === compAnswer) {
+        alert("Ты выиграл!");
+    } else {
+        alert("Компьютер выиграл!");
+    }
+}
 
 
 
