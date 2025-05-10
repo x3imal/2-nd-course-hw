@@ -178,7 +178,7 @@
                             <h3 class="mini-games__name">Угадай число</h3>
                             <p class="mini-games__description">Попробуй угадать случайное <br> число от 1 до 100.</p>
                             <div class="mini-games__start">
-                                <a onclick=randomNumberGame() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=randomNumberGame() href="    " class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                             <h3 class="mini-games__name">Простая арифметика</h3>
                             <p class="mini-games__description">Попробуй решить простые арифметические задачи.</p>
                             <div class="mini-games__start">
-                                <a onclick=simpleArithmeticGame() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=simpleArithmeticGame() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
@@ -206,7 +206,7 @@
                             <h3 class="mini-games__name">Переверни текст</h3>
                             <p class="mini-games__description">Попробуй ввести текст, который будет перевернут.</p>
                             <div class="mini-games__start">
-                                <a onclick=turnTheTextOver() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=turnTheTextOver() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
                             <p class="mini-games__description">Отвечай на вопросы викторины <br> с вариантами ответов.
                             </p>
                             <div class="mini-games__start">
-                                <a onclick=runQuiz() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=runQuiz() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
                             <h3 class="mini-games__name">Камень, <br> ножницы, <br> бумага</h3>
                             <p class="mini-games__description">Сыграй в популярную игру <br>против компьютера.</p>
                             <div class="mini-games__start">
-                                <a onclick=rockPaperScissors() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=rockPaperScissors() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
@@ -250,7 +250,7 @@
                             <p class="mini-games__description">Игра, в которой при клике на кнопку фон страницы меняется
                                 на случайный.</p>
                             <div class="mini-games__start">
-                                <a href="#" class="mini-games__start-button">Играть!</a>
+                                <a id="colorGameButton" href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
@@ -270,6 +270,35 @@
 </footer>
 
 <script>
+    const buttonElement = document.querySelector('#colorGameButton');
+    const mainElement = document.querySelector('.main');
+    const colorArray = [
+        "color-red",
+        "color-blue",
+        "color-green",
+        "color-purple",
+        "color-orange",
+        "color-yellow",
+        "color-gray",
+        "color-custom"
+    ];
+    let colorIndex = 0;
+    let currentClass = null;
+
+    buttonElement.addEventListener('click', () => {
+        event.preventDefault();
+
+        if(currentClass) {
+            mainElement.classList.remove(currentClass);
+        }
+
+        currentClass = colorArray[colorIndex];
+        mainElement.classList.add(currentClass);
+
+        colorIndex = (colorIndex + 1) % colorArray.length;
+    })
+
+
     const marquee = document.querySelector('.marquee');
     const originalList = marquee.querySelector('ul');
     const clone = originalList.cloneNode(true);
