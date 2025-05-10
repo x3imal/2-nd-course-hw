@@ -66,7 +66,7 @@
             <div class="marquee__item"><a class="marquee__name" href="#">УГАДАЙ ЧИСЛО</a></div>
             <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
             <div class="marquee__item"><a class="marquee__name" href="#">ПЕРЕВЕРНИН ТЕКСТ</a></div>
-            <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
+<!--            <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>-->
             <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
             <div class="marquee__item"><a class="marquee__name" href="#">ПРОСТАЯ АРИФМЕТИКА</a></div>
             <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
@@ -268,7 +268,6 @@
         <h3 class="footer__title">Все права защищены.</h3>
     </div>
 </footer>
-
 <script>
     const buttonElement = document.querySelector('#colorGameButton');
     const mainElement = document.querySelector('.main');
@@ -297,12 +296,6 @@
 
         colorIndex = (colorIndex + 1) % colorArray.length;
     })
-
-
-    const marquee = document.querySelector('.marquee');
-    const originalList = marquee.querySelector('ul');
-    const clone = originalList.cloneNode(true);
-    marquee.appendChild(clone);
 </script>
 </body>
 </html>
