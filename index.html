@@ -66,7 +66,7 @@
             <div class="marquee__item"><a class="marquee__name" href="#">УГАДАЙ ЧИСЛО</a></div>
             <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
             <div class="marquee__item"><a class="marquee__name" href="#">ПЕРЕВЕРНИН ТЕКСТ</a></div>
-            <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
+<!--            <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>-->
             <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
             <div class="marquee__item"><a class="marquee__name" href="#">ПРОСТАЯ АРИФМЕТИКА</a></div>
             <div class="marquee__star"><img class="marquee__star-img" src="./img/Star36.svg" alt="star"/></div>
@@ -178,12 +178,12 @@
                             <h3 class="mini-games__name">Угадай число</h3>
                             <p class="mini-games__description">Попробуй угадать случайное <br> число от 1 до 100.</p>
                             <div class="mini-games__start">
-                                <a onclick=randomNumberGame() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=randomNumberGame() href="    " class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
                     <div class="mini-games__img">
-                        <img id="game1" src="./img/game1.svg" alt="Game 1">
+                        <img id="game1" src="./img/game1.jpg" alt="Game 1">
                     </div>
                 </article>
                 <article class="mini-games__item mini-games__item--right">
@@ -192,12 +192,12 @@
                             <h3 class="mini-games__name">Простая арифметика</h3>
                             <p class="mini-games__description">Попробуй решить простые арифметические задачи.</p>
                             <div class="mini-games__start">
-                                <a onclick=simpleArithmeticGame() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=simpleArithmeticGame() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
                     <div class="mini-games__img">
-                        <img id="game2" src="./img/game2.svg" alt="Game 2">
+                        <img id="game2" src="./img/game2.jpg" alt="Game 2">
                     </div>
                 </article>
                 <article class="mini-games__item mini-games__item--left">
@@ -206,12 +206,12 @@
                             <h3 class="mini-games__name">Переверни текст</h3>
                             <p class="mini-games__description">Попробуй ввести текст, который будет перевернут.</p>
                             <div class="mini-games__start">
-                                <a onclick=turnTheTextOver() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=turnTheTextOver() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
                     <div class="mini-games__img">
-                        <img id="game3" src="./img/game3.svg" alt="Game 3">
+                        <img id="game3" src="./img/game3.jpg" alt="Game 3">
                     </div>
                 </article>
                 <article class="mini-games__item mini-games__item--right">
@@ -221,12 +221,12 @@
                             <p class="mini-games__description">Отвечай на вопросы викторины <br> с вариантами ответов.
                             </p>
                             <div class="mini-games__start">
-                                <a onclick=runQuiz() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=runQuiz() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
                     <div class="mini-games__img">
-                        <img id="game5" src="./img/game5.svg" alt="Game 5">
+                        <img id="game5" src="./img/game5.jpg" alt="Game 5">
                     </div>
                 </article>
                 <article class="mini-games__item mini-games__item--left">
@@ -235,7 +235,7 @@
                             <h3 class="mini-games__name">Камень, <br> ножницы, <br> бумага</h3>
                             <p class="mini-games__description">Сыграй в популярную игру <br>против компьютера.</p>
                             <div class="mini-games__start">
-                                <a onclick=rockPaperScissors() href="#" class="mini-games__start-button">Играть!</a>
+                                <a onclick=rockPaperScissors() href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
@@ -250,12 +250,12 @@
                             <p class="mini-games__description">Игра, в которой при клике на кнопку фон страницы меняется
                                 на случайный.</p>
                             <div class="mini-games__start">
-                                <a href="#" class="mini-games__start-button">Играть!</a>
+                                <a id="colorGameButton" href="" class="mini-games__start-button">Играть!</a>
                             </div>
                         </div>
                     </div>
                     <div class="mini-games__img">
-                        <img id="game6" src="./img/game6.svg" alt="Game 6">
+                        <img id="game6" src="./img/game6.jpg" alt="Game 6">
                     </div>
                 </article>
             </div>
@@ -268,12 +268,34 @@
         <h3 class="footer__title">Все права защищены.</h3>
     </div>
 </footer>
-
 <script>
-    const marquee = document.querySelector('.marquee');
-    const originalList = marquee.querySelector('ul');
-    const clone = originalList.cloneNode(true);
-    marquee.appendChild(clone);
+    const buttonElement = document.querySelector('#colorGameButton');
+    const mainElement = document.querySelector('.main');
+    const colorArray = [
+        "color-red",
+        "color-blue",
+        "color-green",
+        "color-purple",
+        "color-orange",
+        "color-yellow",
+        "color-gray",
+        "color-custom"
+    ];
+    let colorIndex = 0;
+    let currentClass = null;
+
+    buttonElement.addEventListener('click', () => {
+        event.preventDefault();
+
+        if(currentClass) {
+            mainElement.classList.remove(currentClass);
+        }
+
+        currentClass = colorArray[colorIndex];
+        mainElement.classList.add(currentClass);
+
+        colorIndex = (colorIndex + 1) % colorArray.length;
+    })
 </script>
 </body>
 </html>

@@ -110,7 +110,6 @@
       align-items: flex-start;
       background: #FFF;
       box-shadow: 0 20px 67px -12px rgba(0, 0, 0, 0.13);
-      border-radius: 45px;
     }
 
     &__content {
@@ -136,7 +135,7 @@
       display: flex;
       width: 385px;
       height: 285px;
-      border-radius: 30px;
+      //border-radius: 30px;
     }
 
     &__title {
@@ -145,7 +144,7 @@
       font-weight: 700;
       line-height: normal;
       margin-top: 48px;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
 
     &__name {
@@ -160,11 +159,13 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      margin-top: 16px;
     }
 
     &__start {
       display: flex;
       justify-content: center;
+      margin-top: 32px;
     }
 
     &__text {
@@ -253,6 +254,14 @@
 
   .mini-games__inner {
      padding: 0 16px;
+  }
+
+  .footer {
+    height: 100px;
+
+    &__title {
+      font-size: 16px;
+    }
   }
 }
 

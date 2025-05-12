@@ -1,4 +1,3 @@
-
 //Игра 1
 function randomNumberGame() {
     const secretNumb = Math.floor(Math.random() * 100) + 1;
@@ -57,7 +56,7 @@ function simpleArithmeticGame() {
 }
 
 //Игра 3
-function turnTheTextOver () {
+function turnTheTextOver() {
     let userText = prompt("Введите текст!")
     const reversed = userText.split('').reverse().join('');
     alert(reversed);
@@ -119,5 +118,6 @@ function rockPaperScissors() {
     }
 }
 
+//Игра 6
 
 
